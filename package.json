@@ -1,0 +1,27 @@
+{
+  "name": "ganesh-remover-of-obstacles",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:model": "node scripts/prepare-ganesha.mjs",
+    "sculpt": "node scripts/sculpt-idol.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "playwright test",
+    "test:production": "npm run build && playwright test --config playwright.production.config.ts"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/dm-sans": "^5.3.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "meshoptimizer": "0.22.0",
+    "@playwright/test": "^1.55.0",
+    "@types/three": "^0.180.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}
